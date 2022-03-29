@@ -1,6 +1,8 @@
 import './style/UserComponent.css';
 import { FaPen, FaPlus} from 'react-icons/fa';
+import { useNavigate } from "react-router-dom";
 function UserComponent({username,icon, uuid}) {
+    const navigate = useNavigate();
 
     if(username && icon && uuid){
         return (
@@ -10,21 +12,28 @@ function UserComponent({username,icon, uuid}) {
                 </div>
                 <div className="info">
                     <span className="username">{username}</span>
-                    <button className="useBtn">Use</button>
+                    <button className="useBtn" onClick={useUser}>Use</button>
                 </div>
-                <button className="edit">
+                <button className="edit" onClick={editUser}>
                     <FaPen />
                 </button>
             </div>
         );
     }else {
         return (
-            <button className="user new">
+            <button className="user new" onClick={createNewUser}>
                 <FaPlus />
             </button>
         )
     }
+    function createNewUser(e){
 
+    }
+    function editUser(e){
 
+    }
+    function useUser(){
+        navigate("/user/" + uuid, { replace: true });
+    }
 }
 export default UserComponent;
