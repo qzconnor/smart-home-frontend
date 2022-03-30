@@ -11,9 +11,10 @@ body, html{
 :root{
     --accentColor: #ff1e56;
     --backGround: #282c34;
+    --darker: #292932;
 }
 
-body{
+.app{
     background-color: var(--backGround);
 }
 button{
@@ -26,6 +27,27 @@ button{
     border: navajowhite;
     width: 80px;
 }
+
 button:hover{
     background-color: rgba(128, 128, 128, 0.18);
+}
+.group{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+.group label{
+    color: white;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input{
+    border-radius: 4px;
+    border: 1px solid var(--accentColor);
+    background-color: var(--darker);
+    padding: 10px;
+    color: white;
+}
+input:active, input:focus{
+    outline: none;
 }

@@ -1,0 +1,26 @@
+.utilitys{
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  left: 10px;
+  bottom: 0;
+  margin: 15px;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.utilitys div:not(:last-child){
+  margin-bottom: 15px;
+}
+
+.backBtn{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 15px;
+}
+.app{
+  width: 100vw;
+  height: 100vh;
+}

@@ -9,7 +9,7 @@ function UserComponent({username,icon, uuid}) {
         return (
             <div className="user" data-uuid={uuid}>
                 <div className="icon">
-                    <img src={`http://localhost:3000/api/icon/display?name=${icon}`} alt="icon"/>
+                    <img src={`http://192.168.178.32:3000/api/icon/display?name=${icon}`} alt="icon"/>
                 </div>
                 <div className="info">
                     <span className="username">{username}</span>
