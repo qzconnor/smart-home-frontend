@@ -10,4 +10,22 @@ body, html{
 }
 :root{
     --accentColor: #ff1e56;
+    --backGround: #282c34;
+}
+
+body{
+    background-color: var(--backGround);
+}
+button{
+    background-color: var(--accentColor);
+    border-radius: 4px;
+    color: white;
+    padding: 5px 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    border: navajowhite;
+    width: 80px;
+}
+button:hover{
+    background-color: rgba(128, 128, 128, 0.18);
 }

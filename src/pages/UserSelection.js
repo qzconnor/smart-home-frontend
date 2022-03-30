@@ -7,7 +7,7 @@ function UserSelection() {
     const [users, setUsers] = useState([])
 
     useEffect(() => {
-        axios.get("http://localhost:3000/api/user/get").then(res => {
+        axios.post("http://localhost:3000/api/user/get").then(res => {
             setUsers(res.data)
         })
     },[])
@@ -15,7 +15,6 @@ function UserSelection() {
         <div className="selection">
              <div className="users">
                  {users.map((user, i) => {
-                     console.log(user)
                      return <UserComponent icon={user.icon} username={user.username} uuid={user._id} key={i}/>
                  })}
                  <UserComponent />

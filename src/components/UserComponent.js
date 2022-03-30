@@ -1,6 +1,7 @@
 import './style/UserComponent.css';
 import { FaPen, FaPlus} from 'react-icons/fa';
 import { useNavigate } from "react-router-dom";
+
 function UserComponent({username,icon, uuid}) {
     const navigate = useNavigate();
 
@@ -27,10 +28,10 @@ function UserComponent({username,icon, uuid}) {
         )
     }
     function createNewUser(e){
-
+        navigate("/new", { replace: true });
     }
     function editUser(e){
-
+        navigate("/edit/" + uuid, { replace: true });
     }
     function useUser(){
         navigate("/user/" + uuid, { replace: true });
