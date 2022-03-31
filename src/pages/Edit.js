@@ -51,7 +51,7 @@ function Edit() {
                         </div>
                        <div className="group">
                            <label htmlFor="username">Username</label>
-                           <input type="text" value={newUsername} id="username" onChange={e => setNewUsername(e.target.value)}/>
+                           <input type="text" value={newUsername} id="username" onChange={e => setNewUsername(e.target.value)} maxLength="16"/>
                        </div>
                         <div className="btns">
                             <button onClick={handleSubmit}>Save</button>

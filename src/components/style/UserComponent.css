@@ -8,7 +8,10 @@
     border: 1px solid var(--accentColor);
     position: relative;
     width: 150px;
-    transform: skewX(-5deg)
+    transform: skewX(-5deg);
+    -webkit-box-shadow: 0 0 7px -2px #000000;
+    box-shadow: 0 0 7px -2px #000000;
+    cursor: pointer;
 }
 .user:not(:last-child){
     margin-right: 15px;
@@ -21,6 +24,7 @@
     font-size: 20px;
     cursor: pointer;
     color: var(--accentColor);
+    height: 125px;
 }
 .user .icon img{
     width: 64px;
@@ -69,4 +73,6 @@
     width: 32px;
     height: 32px;
     border: 1px solid var(--accentColor);
+    -webkit-box-shadow: 0 0 7px -2px #000000;
+    box-shadow: 0 0 7px -2px #000000;
 }

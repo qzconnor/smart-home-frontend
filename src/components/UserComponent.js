@@ -22,7 +22,7 @@ function UserComponent({username,icon, uuid}) {
         );
     }else {
         return (
-            <button className="user new" onClick={createNewUser}>
+            <button className="user new" onClick={createNewUser} title="New User">
                 <FaPlus />
             </button>
         )

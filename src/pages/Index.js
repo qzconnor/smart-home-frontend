@@ -5,7 +5,6 @@ import {useEffect} from "react";
 function Index() {
     // eslint-disable-next-line no-unused-vars
     const [cookies, setCookie] = useCookies(["user"])
-    console.log(cookies)
     const navigate = useNavigate()
 
     useEffect(()=>{
