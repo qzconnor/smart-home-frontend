@@ -4,6 +4,7 @@ import './styles/Edit.css';
 import {useEffect, useState} from "react";
 import axios from "axios";
 import { FaTrash} from 'react-icons/fa';
+import config from "../config"
 
 function Edit() {
     const { uuid } = useParams()
@@ -14,7 +15,7 @@ function Edit() {
 
 
     useEffect(() => {
-        axios.post("http://192.168.178.32:3000/api/user/get", {
+        axios.post(`${config.URL}:3000/api/user/get`, {
                 "uuid": uuid
             }
         ).then(res => {
@@ -26,14 +27,14 @@ function Edit() {
     },[uuid])
 
     function handleSubmit(){
-        axios.post(`http://192.168.178.32:3000/api/user/update?uuid=${uuid}`, {
+        axios.post(`${config.URL}:3000/api/user/update?uuid=${uuid}`, {
             username: newUsername
         }).then(res => {
             navigate("/", {replace: true})
         })
     }
     function handleDelete(){
-        axios.post(`http://192.168.178.32:3000/api/user/remove`, {
+        axios.post(`${config.URL}:3000/api/user/remove`, {
             "uuid": uuid
         }).then(res => {
             console.log(res.data.message)

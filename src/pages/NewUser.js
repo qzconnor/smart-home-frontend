@@ -4,6 +4,8 @@ import './styles/Edit.css';
 import {useState} from "react";
 import axios from "axios";
 
+import config from "../config.js"
+
 function NewUser() {
     // eslint-disable-next-line no-unused-vars
     const { uuid } = useParams()
@@ -12,7 +14,7 @@ function NewUser() {
     const navigate = useNavigate()
 
     function handleSubmit(){
-        axios.post(`http://192.168.178.32:3000/api/user/create`, {
+        axios.post(`${config.URL}:3000/api/user/create`, {
             username: newUsername
         }).then(res => {
             navigate("/", {replace: true})
