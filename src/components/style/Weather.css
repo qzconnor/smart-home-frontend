@@ -1,0 +1,31 @@
+.weather{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 15px;
+}
+.data{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+.data .location{
+    display: flex;
+    align-items: center;
+}
+.data .location svg{
+    margin-right: 5px;
+}
+.data .icon{
+    display: flex;
+}
+.data .icon .right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.data .icon img{
+    width: 64px;
+    height: 64px;
+}

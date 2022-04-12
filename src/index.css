@@ -51,3 +51,6 @@ input{
 input:active, input:focus{
     outline: none;
 }
+svg{
+    vertical-align: middle;
+}

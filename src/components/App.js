@@ -10,6 +10,7 @@ import { CookiesProvider } from "react-cookie";
 import {FaExpand, FaRetweet} from 'react-icons/fa';
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import Edit from "../pages/Edit";
+import Settings from "../pages/Settings";
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
                           <Route exact path="/new" element={<NewUser />} />
                           <Route exact path="/user/:uuid" element={<User />} />
                           <Route exact path="/edit/:uuid" element={<Edit />} />
+                          <Route exact path="/settings/:uuid" element={<Settings />} />
                           <Route path="*" element={<Navigate to="/"/>} />
                       </Routes>
 

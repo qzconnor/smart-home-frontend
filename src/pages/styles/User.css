@@ -3,18 +3,31 @@
     top: 15px;
     right: 15px;
     display: flex;
+    align-items: center;
+}
+
+.user_status button{
     border: 1px solid var(--accentColor);
     border-radius: 4px;
     padding: 10px 15px;
     align-items: center;
     background-color: transparent;
     margin-top: 0;
-    width: unset;
     font-weight: bold;
+    width: unset;
+    display: flex;
 }
 .user_status img{
     width: 32px;
     margin-left: 15px;
+}
+.user_status svg{
+    width: 32px;
+    height: 32px;
+}
+.user_status .settings{
+    margin-right: 15px;
+    cursor: pointer;
 }
 .user_dashboard{
     color: white;

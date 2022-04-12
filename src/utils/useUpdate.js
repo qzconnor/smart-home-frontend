@@ -6,5 +6,5 @@ export function useUpdate(socket,cb){
         return () => {
             socket.off("update")
         }
-    },[cb,socket])
+    })
 }
